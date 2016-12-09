@@ -12,16 +12,16 @@ if (!session_id()) @session_start();
 date_default_timezone_set("Europe/Bratislava");
 
 // nejaké konštanty ktoré využijeme v aplikácii, napr. vo funkcii url()
-define('BASE_URL', 'http://localhost/simple-blog');
+define('BASE_URL', 'http://localhost:8000/');
 define('IMAGE_DIRECTORY', 'assets/images');
 
 // nastavenia pre databázu
 $database = array(
     "host"     => "localhost",
-    "port"     => "5432",
-    "dbname"   => "test",
-    "user"     => "postgres",
-    "password" => "postgres",
+    "port"     => "5433",
+    "dbname"   => "simple_blog",
+    "user"     => "hlbinamyslenia",
+    "password" => "root",
     "settings" => array(
         PDO::ATTR_ERRMODE          => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_EMULATE_PREPARES => false
